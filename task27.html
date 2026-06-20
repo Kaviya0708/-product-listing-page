@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Product Listing</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#a18cd1);
+    min-height:100vh;
+}
+
+header{
+    background:#ffffff;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    color:#6c63ff;
+}
+
+.products{
+    max-width:1200px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.price{
+    color:#ff4d6d;
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.rating{
+    color:gold;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#6c63ff,#ff4d6d);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🛍️ My Product Store</h1>
+</header>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?1">
+        <div class="card-content">
+            <h3>Smart Watch</h3>
+            <div class="price">₹2,999</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?2">
+        <div class="card-content">
+            <h3>Wireless Headphones</h3>
+            <div class="price">₹1,999</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?3">
+        <div class="card-content">
+            <h3>Sports Shoes</h3>
+            <div class="price">₹3,499</div>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?4">
+        <div class="card-content">
+            <h3>Smartphone</h3>
+            <div class="price">₹19,999</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?5">
+        <div class="card-content">
+            <h3>Laptop</h3>
+            <div class="price">₹54,999</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?6">
+        <div class="card-content">
+            <h3>Gaming Mouse</h3>
+            <div class="price">₹999</div>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <button onclick="addCart()">Add To Cart</button>
+        </div>
+    </div>
+
+</section>
+
+<script>
+function addCart(){
+    alert("Product Added To Cart Successfully!");
+}
+</script>
+
+</body>
+</html>
